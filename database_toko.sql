@@ -1,5 +1,7 @@
 CREATE DATABASE TOKO_BUKU;
 
+USE TOKO_BUKU;
+
 CREATE TABLE admin (
 id_admin int NOT NULL,
 username varchar(100) NOT NULL,
@@ -19,7 +21,6 @@ CREATE TABLE buku (
   harga int NOT NULL
 );
 
-
 INSERT INTO buku(id_buku, judul_buku, jumlah, harga) VALUES
 (1, 'Fisika', 500,  51000),
 (2, 'Matematika', 1000, 88000),
@@ -27,19 +28,16 @@ INSERT INTO buku(id_buku, judul_buku, jumlah, harga) VALUES
 (4, 'Biologi', 200, 34000),
 (5, 'Penjaskes', 200, 85000);
 
-
 CREATE TABLE pelanggan (
   id_pelanggan int NOT NULL,
   nama_pelanggan varchar(100) NOT NULL,
 alamat varchar(100) NOT NULL,
   nomor_telepon varchar(25) NOT NULL);
 
-
-
-INSERT INTO pelanggan(id_pelanggan, nama_pelanggan,alamat, nomor_telepon) VALUES
-(1, Agnes Monica, Bandung Barat, 08881 ),
-(2, Raditya Dika, Sulawesi Tengah , 0883838),
-(3, Riski Astuti, Kalimantan Utara, 0883433);
+INSERT INTO pelanggan(id_pelanggan, nama_pelanggan, alamat, nomor_telepon) VALUES
+(1, 'Agnes Monica', 'Bandung Barat', 08881),
+(2, 'Raditya Dika', 'Sulawesi Tengah' , 0883838),
+(3, 'Riski Astuti', 'Kalimantan Utara', 0883433);
 
 CREATE TABLE pembelian (
   id_pembelian int NOT NULL,
