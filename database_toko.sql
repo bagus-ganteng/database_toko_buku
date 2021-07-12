@@ -21,12 +21,14 @@ CREATE TABLE buku (
   harga int NOT NULL
 );
 
-INSERT INTO buku(id_buku, judul_buku, jumlah, harga) VALUES
-(1, 'Fisika', 500,  51000),
-(2, 'Matematika', 1000, 88000),
-(3, 'Kimia', 500, 6500),
-(4, 'Biologi', 200, 34000),
-(5, 'Penjaskes', 200, 85000);
+
+INSERT INTO buku(id_buku, judul_buku, jumlah, satuan, harga) VALUES
+(1, 'Fisika', 500, 5, 51000),
+(2, 'Matematika', 1000, 9, 88000),
+(3, 'Kimia', 500, 4, 6500),
+(4, 'Biologi', 200, 8, 34000),
+(5, 'Penjaskes', 200, 6, 85000);
+
 
 CREATE TABLE pelanggan (
   id_pelanggan int NOT NULL,
@@ -47,6 +49,6 @@ CREATE TABLE pembelian (
 );
 
 INSERT INTO pembelian (id_pembelian, id_pelanggan, tanggal_pembelian, total_pembelian) VALUES
-(1, 1, 2020-05-26, 50000),
-(2, 2, 2020-05-12, 15000),
-(3, 3, 2020-05-07, 20000);
+(1, 1, '2020-05-26', 50000),
+(2, 2, '2020-05-12', 15000),
+(3, 3, '2020-05-07', 20000);
